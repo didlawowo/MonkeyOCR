@@ -457,7 +457,7 @@ async def async_single_task_recognition(input_file_path: str, output_dir: str, t
             images = convert_from_path(input_file_path, dpi=150)
         elif file_extension in ['jpg', 'jpeg', 'png']:
             from PIL import Image
-            images = [Image.open(input_file_path)]
+            images = [input_file_path]
         else:
             raise ValueError(f"Unsupported file extension: {file_extension}")
         
